@@ -60,7 +60,7 @@ public class DownloaderService extends IntentService {
                 filedata=fileInputStream.read();
             }
             Intent intent=new Intent("parv.com");
-            intent.putExtra("data",filedata);
+            intent.putExtra("data",stringBuffer.toString());
             sendBroadcast(intent);
 
         }catch (Exception e){
